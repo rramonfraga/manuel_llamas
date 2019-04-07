@@ -1,0 +1,19 @@
+//SECTION SPONSORS
+.articles {
+	text-align: center;
+	&__grid {
+		margin-top: 2rem;
+	}
+	&__item {
+		background-repeat: no-repeat;
+		background-size: 80% auto;
+    background-position: center;
+    background-color: red;
+		height: 10rem;
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+}
+.articles-5 {
+	background-size: 50% auto;
+}

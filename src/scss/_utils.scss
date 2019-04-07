@@ -1,0 +1,62 @@
+/*-------------------------------------------------*\
+    $FUNCTIONS (Before VARS to use them)
+\*-------------------------------------------------*/
+
+$base-fontsize : 16;
+
+// PIXEL TO REM: height: rem(50) -> 3.125rem;
+@function rem($px, $context:$base-fontsize) {
+  @return ($px / $context) * 1rem;
+}
+//Idem with EMs for media queries
+@function em($px, $context:$base-fontsize) {
+  @return ($px / $context) * 1em;
+}
+
+$elements: overbody, headfooter;
+
+@function z($element) {
+  @return index($elements, $element);
+}
+
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+
+/* FONTS */
+$light:  400;
+$medium: 500;
+$bold:   600;
+
+/* COLORS */
+//App colors
+$blue:  #3F9FC9;
+$green: #4CDEC4;
+$orange:#FDC468;
+$blue-dark:   #373760;
+$sponsors-bg: #f4f5f7;
+
+//Text
+$text-color: $blue-dark;
+
+/* SIZES */
+$header-height: 5rem;
+$footer-height: $header-height;
+
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+
+//WRAPPERS: Center and max-width body.
+@mixin wrapper($width : 100%, $max-width: 100%) {
+  margin-left:auto;
+  margin-right:auto;
+  max-width: $max-width;
+  width: $width;
+}
+
+$elements: overbody, headfooter, lightbox, top, spinner;
+
+@function z($element) {
+  @return index($elements, $element);
+}
